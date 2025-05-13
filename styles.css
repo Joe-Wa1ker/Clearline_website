@@ -1,0 +1,250 @@
+/* montserrat-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./Fonts/montserrat-v29-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* montserrat-600 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./Fonts/montserrat-v29-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /*=====================*/
+  /*===== CSS Reset =====*/
+  /*=====================*/
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 1px solid red;
+  }
+
+  html {
+    font-size: 62.5%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /*===== Custom Properties =====*/
+
+  :root {
+    /* Colors */
+    --primary-blue: #002147;
+    --secondary-soft-white: #F5F7FA;
+    --secondary-slate-gray: #708090;
+    --accent-coral: #FF6B6B;
+
+    /* Font sizes */ 
+    --h1-text-font-size: 3.5rem;
+    --h2-text-font-size: 2.5rem;
+    --h3-text-font-size: 2.2rem;
+    --p-text-font-size: 1.5rem;
+    --header__top-nav-font-size: 1.3rem;
+    --cta-btn-font-size: 1.1rem;
+
+    /* Font weights */
+    --cta-btn-font-weight: 700;
+    --stats-figure-font-weight: 400;
+    --newsletter__title-font-weight: 400;
+  }
+
+  /*==================*/
+  /*===== 375px+ =====*/
+  /*==================*/
+
+  /*===== Global Styles =====*/
+
+  body {
+    min-height: 100vh;
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--primary-blue);
+  }
+
+  a:hover {
+    color: var(--accent-coral);
+  }
+
+  h1 {
+    font-size: var(--h1-text-font-size);
+  }
+
+  h2 {
+    font-size: var(--h2-text-font-size);
+  }
+
+  h3 {
+    font-size: var(--h3-text-font-size);
+  }
+
+  p {
+    font-size: var(--p-text-font-size);
+  }
+
+  /*===== Header =====*/
+
+  .header__top {
+    display: flex; 
+    flex-direction: row;
+    justify-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    padding: 2.5% 0%
+  }
+
+  .header__top > img {
+    width: 30%;
+    max-width: 180px;
+    height: auto;
+  }
+
+  .header__top-nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .header__top-nav-item {
+    
+    font-size: var(--header__top-nav-font-size);
+  }
+
+  .header__hero {
+    width: 100%;
+    background-image: url(./Images/header-hero-home.jpg);
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 5em 0;
+  }
+
+  .header__hero h1, 
+  .header__hero h2, 
+  .header__hero p {
+    color: var(--secondary-soft-white);
+    max-width: 80%;
+    margin-left: 10%;
+  }
+
+  .header__hero-btn-container {
+    max-width: 60%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .header__hero-btn-container a {
+    background-color: var(--secondary-soft-white);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: var(--p-text-font-size);
+    color: var(--primary-blue);
+  }
+
+  .header__hero-btn-container a:hover {
+    color: var(--accent-coral);
+  }
+
+  /*===== Main =====*/
+
+  .why__us {
+    width: 90%;
+    margin: 0 auto;
+    padding: 5% 0%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+    color: var(--secondary-slate-gray);
+  }
+
+  .why__us h2 {
+    color: var(--primary-blue);
+  }
+
+  .why__us-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .why__us-card {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .why__us-card-icon {
+    align-self: flex-start;
+    width: 30px;
+    height: auto;
+  }
+
+  .why__us-card-text {
+    align-self: center;
+  }
+
+  /*===== Our Services =====*/
+
+  .our__services {
+    width: 90%;
+    margin: 0 auto;
+    padding: 5% 0%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+  }
+
+  .our__services-card-container {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+  }
+
+  .our__services h2, .our__services h3 {
+    color: var(--primary-blue);
+    text-align: center;
+  }
+
+  .our__services-card {
+    border: var(--secondary-slate-gray) 1px solid;
+    border-radius: 0.5rem;
+    padding: 5%;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1.5em;
+    align-items: center;
+    text-align: center;
+  }
+
+  .our__services-card-icon {
+    width: 30px;
+    height: auto;
+  }
+
+
+
+
+
+
+
+
+
