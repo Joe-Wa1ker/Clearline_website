@@ -575,10 +575,72 @@
 
     @media screen and (min-width:1281px) {
 
-      .our__services-card-container {
-        flex-direction: row;
-        align-items: flex-start;
+      /*===== Index/Global =====*/
+
+      .why__us {
+        max-width: 80%;
       }
 
+      .our__services {
+        max-width: 80%;
+      }
+      
+      .our__services-card-container {
+        width: 100%;
+        flex-direction: row;
+        align-items: stretch;
+      }
+
+      .main__cta-container h3
+
+      footer {
+        padding: 2.5em;
+      }
+
+      .footer__contact {
+        padding: 3% 0;
+      }
+
+      /*===== Pricing =====*/
+
+      .pricing__main-windows {
+        padding: 2.5em 0;
+      }
+
+      .pricing__main-windows-card-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+          "card1 card2 card3 card4"
+          "card5 card6 card7 card8";
+        gap: 2rem;
+        align-items: stretch;
+        padding: 2.5% 0;
+        width: 80%;
+      }
+      
+      .card1 { grid-area: card1; }
+      .card2 { grid-area: card2; }
+      .card3 { grid-area: card3; }
+      .card4 { grid-area: card4; }
+      .card5 { grid-area: card5; }
+      .card6 { grid-area: card6; }
+      .card7 { grid-area: card7; }
+      .card8 { grid-area: card8; }
+
+      .pricing__main-other-card-container {
+        flex-direction: row;
+      }
+
+      .pricing__main-other {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+      }
+
+      .pricing__main-other-card-container {
+        align-items: stretch;
+      }
       
     }
