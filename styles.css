@@ -39,7 +39,7 @@
     --secondary-soft-white: #F5F7FA;
     --secondary-slate-gray: #708090;
     --accent-coral: #FF6B6B;
-    --light-blue-btn-hover: #005fa3;
+    --main-button-color: #005fa3;
 
     /* Font sizes */ 
     --h1-text-font-size: 3.5rem;
@@ -378,7 +378,7 @@
   }
 
   .pricing__main-card-text-cont a {
-    background-color: var(--primary-blue);
+    background-color: var(--main-button-color);
     color: var(--secondary-soft-white);
     padding: 1rem 4rem;
     border-radius: 0.5rem;
@@ -388,7 +388,7 @@
   }
 
   .pricing__main-card-text-cont a:hover {
-    background-color: var(--light-blue-btn-hover);
+    background-color: var(--primary-blue);
     font-weight: 600;
   }
 
@@ -416,6 +416,15 @@
     text-align: center;
     margin: 0 auto;
   }
+
+  .contact__form-text {
+    padding: 1em 0;
+    color: var(--primary-blue);
+    text-align: center;
+    text-wrap: pretty;
+    max-width: 500px;
+    margin: 0 auto;
+}
 
   form {
     width: 90%;
@@ -498,7 +507,7 @@
   .form__submit {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    background-color: var(--primary-blue);
+    background-color: var(--main-button-color);
     color: var(--secondary-soft-white);
     border: none;
     border-radius: 4px;
@@ -507,7 +516,7 @@
   }
 
   .form__submit:hover {
-    background-color: var(--light-blue-btn-hover);
+    background-color: var(--primary-blue);
     font-weight: 600;
   }
 
@@ -633,11 +642,11 @@
       }
 
       .pricing__main-other {
-        width: 80%;
+        padding: 2.5% 5% 0;
         display: flex;
         flex-direction: column;
         align-content: center;
-      }
+      } 
 
       .pricing__main-other-card-container {
         align-items: stretch;
