@@ -23,7 +23,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: 1px solid red;
   }
 
   html {
@@ -79,6 +78,7 @@
 
   a:hover {
     color: var(--accent-coral);
+    font-weight: 600;
   }
 
   h1 {
@@ -161,6 +161,7 @@
 
   .header__hero-btn-container a:hover {
     color: var(--accent-coral);
+    font-weight: 600;
   }
 
   /*===== Main =====*/
@@ -168,7 +169,7 @@
   .why__us {
     width: 90%;
     margin: 0 auto;
-    padding: 5% 0%;
+    padding: 5% 0% 0%;
     display: flex;
     flex-direction: column;
     gap: 2.5em;
@@ -209,7 +210,9 @@
     padding: 5% 0%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 2.5em;
+    
   }
 
   .our__services-card-container {
@@ -217,6 +220,10 @@
     display: flex;
     flex-direction: column;
     gap: 2.5em;
+  }
+
+  .our__services h2 {
+    margin: 0 auto;
   }
 
   .our__services h2, .our__services h3 {
@@ -233,12 +240,46 @@
     gap: 1.5em;
     align-items: center;
     text-align: center;
+    width: 100%;
+    margin: 0 auto;
   }
 
   .our__services-card-icon {
     width: 30px;
     height: auto;
   }
+
+  .our__services p {
+    color: var(--secondary-slate-gray);
+  }
+
+  /*===== Main CTA =====*/
+
+  .main__cta {
+    margin: 0 auto;
+    padding: 7.5% 0;
+    background-color: var(--secondary-slate-gray);
+    text-align: center;
+  }
+
+  .main__cta h3 {
+    color: var(--secondary-soft-white);
+    margin-bottom: 1em;
+  }
+
+  .main__cta a {
+    background-color: var(--secondary-soft-white);
+    color: var(--primary-blue);
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .main__cta a:hover {
+    color: var(--accent-coral);
+    font-weight: 600;
+  }
+
+
 
 
 
