@@ -24,59 +24,77 @@
             </nav>
         </section>
 
+        <section class="header__hero">
+          <h1>Contact Us</h1>
+          <h2>Get in touch to start your subscription or book a quote</h2>
+        </section>
+
     </header>
 
     <main>
 
-        <section class="main__hero">
-            <h1>Contact Us</h1>
-            <h2>Get in touch to book your subscription or a quote</h2>
-        </section>
+        <h2 class="contact__form-title">Submit your details and we will be in touch</h2>
 
-        <form name="contact" method="POST" data-netlify="true">
-            <input type="hidden" name="form-name" value="contact">
-          
-            <!-- Contact Details -->
-            <fieldset>
-              <legend>Contact Details</legend>
-          
-              <label for="first-name">First Name:</label>
-              <input type="text" id="first-name" name="first-name">
-          
-              <label for="last-name">Last Name: *</label>
-              <input type="text" id="last-name" name="last-name" required>
-          
-              <label for="company">Company Name (optional):</label>
-              <input type="text" id="company" name="company">
-          
-              <label for="phone">Phone: *</label>
-              <input type="tel" id="phone" name="phone" required>
-          
-              <label for="email">Email: *</label>
-              <input type="email" id="email" name="email" required>
-            </fieldset>
-          
-            <!-- Address Section -->
-            <fieldset>
-              <legend>Address</legend>
-          
-              <label for="street">Street Name & Number:</label>
-              <input type="text" id="street" name="street">
-          
-              <label for="city">City/Town:</label>
-              <input type="text" id="city" name="city">
-          
-              <label for="postcode">Postcode: *</label>
-              <input type="text" id="postcode" name="postcode" required>
-            </fieldset>
-          
-            <!-- Service Selection -->
-            <fieldset>
-              <legend>Service Selection</legend>
-          
-              <label for="primary-service">Primary Service (required):</label>
-              <select id="primary-service" name="primary-service" required>
-                <option value="">-- Please choose an option --</option>
+        <form name="contact" method="POST" data-netlify="true" class="form">
+          <input type="hidden" name="form-name" value="contact">
+        
+          <!-- Contact Details -->
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Contact Details</legend>
+        
+            <div class="form__field">
+              <input type="text" id="first-name" name="first-name" class="form__input" autocomplete="given-name" required placeholder=" ">
+              <label for="first-name" class="form__label">First Name</label>
+            </div>
+        
+            <div class="form__field">
+              <input type="text" id="last-name" name="last-name" class="form__input" autocomplete="family-name" required placeholder=" ">
+              <label for="last-name" class="form__label">Last Name *</label>
+            </div>
+        
+            <div class="form__field">
+              <input type="text" id="company" name="company" class="form__input" autocomplete="organization" placeholder=" ">
+              <label for="company" class="form__label">Company Name (optional)</label>
+            </div>
+        
+            <div class="form__field">
+              <input type="tel" id="phone" name="phone" class="form__input" autocomplete="tel" required placeholder=" ">
+              <label for="phone" class="form__label">Phone *</label>
+            </div>
+        
+            <div class="form__field">
+              <input type="email" id="email" name="email" class="form__input" autocomplete="email" required placeholder=" ">
+              <label for="email" class="form__label">Email *</label>
+            </div>
+          </fieldset>
+        
+          <!-- Address Section -->
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Address</legend>
+        
+            <div class="form__field">
+              <input type="text" id="street" name="street" class="form__input" autocomplete="address-line1" placeholder=" ">
+              <label for="street" class="form__label">Street Name & Number</label>
+            </div>
+        
+            <div class="form__field">
+              <input type="text" id="city" name="city" class="form__input" autocomplete="address-level2" placeholder=" ">
+              <label for="city" class="form__label">City/Town</label>
+            </div>
+        
+            <div class="form__field">
+              <input type="text" id="postcode" name="postcode" class="form__input" autocomplete="postal-code" required placeholder=" ">
+              <label for="postcode" class="form__label">Postcode *</label>
+            </div>
+          </fieldset>
+        
+          <!-- Service Selection -->
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Service Selection</legend>
+        
+            <div class="form__field">
+              <select id="primary-service" name="primary-service" class="form__select" required>
+                <option value="" disabled selected hidden></option>
                 <optgroup label="Window Cleaning">
                   <option value="2 Bed Semi - £15">2 Bed Semi - £15</option>
                   <option value="3 Bed Semi - £17.25">3 Bed Semi - £17.25</option>
@@ -93,10 +111,12 @@
                   <option value="Pressure Washing">Pressure Washing (Bespoke)</option>
                 </optgroup>
               </select>
-          
-              <label for="secondary-service">Interested in another service? (optional):</label>
-              <select id="secondary-service" name="secondary-service">
-                <option value="">-- Optional --</option>
+              <label for="primary-service" class="form__label">Primary Service (required)</label>
+            </div>
+        
+            <div class="form__field">
+              <select id="secondary-service" name="secondary-service" class="form__select">
+                <option value="" disabled selected hidden></option>
                 <optgroup label="Window Cleaning">
                   <option value="2 Bed Semi - £15">2 Bed Semi - £15</option>
                   <option value="3 Bed Semi - £17.25">3 Bed Semi - £17.25</option>
@@ -113,50 +133,34 @@
                   <option value="Pressure Washing">Pressure Washing (Bespoke)</option>
                 </optgroup>
               </select>
-            </fieldset>
-          
-            <!-- Message -->
-            <label for="message">Additional Details / Message:</label>
-            <textarea id="message" name="message" rows="5" placeholder="Let us know about access, extras, or any questions..."></textarea>
-          
-            <!-- Submit -->
-            <button type="submit">Send Enquiry</button>
-          </form>
+              <label for="secondary-service" class="form__label">Interested in another service? (optional)</label>
+            </div>
+          </fieldset>
+        
+          <!-- Message -->
+          <div class="form__field">
+            <textarea id="message" name="message" rows="5" class="form__textarea" required placeholder=" "></textarea>
+            <label for="message" class="form__label">Additional Details / Message</label>
+          </div>
+        
+          <!-- Submit -->
+          <button type="submit" class="form__submit">Send Enquiry</button>
+        </form>
+        
+        <section class="main__contact-page-phone-block">
+
+          <div class="main__contact-page-phone-container">
+
+              <h3>Got a question? Give us a call</h3>
+              <a href="tel:07780440319">07780 440 319</a>
+
+          </div>
+
+      </section>
 
     </main>
 
     <footer>
-
-        <h2>Contact Us</h2>
-    
-        <div class="footer__contact">
-
-            <nav class="footer__contact-nav">
-                <ul>
-                    <li class="footer__contact-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3" class="footer__contact-icon" aria-hidden="true" focusable="false"><path d="M760-480q0-117-81.5-198.5T480-760v-80q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-480h-80Zm-160 0q0-50-35-85t-85-35v-80q83 0 141.5 58.5T680-480h-80Zm198 360q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"/></svg>
-                        <a href="tel:07780440319">07780 440 319</a>
-
-                    </li>
-
-                    <li class="footer__contact-item">
-
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3" class="footer__contact-icon" aria-hidden="true" focusable="false"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
-                        <a href="mailto: jmrwalker97@gmail.com">jmrwalker97@gmail.com</a>
-
-                    </li>
-
-                    <li class="footer__contact-item office_hours">
-
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3" aria-hidden="true" focusable="false"><path d="m612-292 56-56-148-148v-184h-80v216l172 172ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 320q133 0 226.5-93.5T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160Z"/></svg>
-                        <p> Monday to Friday - 8am to 6pm</p>
-                    </li>
-
-                </ul>
-            </nav>
-        </div>
-
-            <hr> 
 
             <small>&copy; All Rights Reserved</small>
 

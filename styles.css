@@ -39,6 +39,7 @@
     --secondary-soft-white: #F5F7FA;
     --secondary-slate-gray: #708090;
     --accent-coral: #FF6B6B;
+    --light-blue-btn-hover: #005fa3;
 
     /* Font sizes */ 
     --h1-text-font-size: 3.5rem;
@@ -211,8 +212,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 2.5em;
-    
   }
 
   .our__services-card-container {
@@ -220,10 +221,6 @@
     display: flex;
     flex-direction: column;
     gap: 2.5em;
-  }
-
-  .our__services h2 {
-    margin: 0 auto;
   }
 
   .our__services h2, .our__services h3 {
@@ -241,7 +238,6 @@
     align-items: center;
     text-align: center;
     width: 100%;
-    margin: 0 auto;
   }
 
   .our__services-card-icon {
@@ -279,13 +275,310 @@
     font-weight: 600;
   }
 
+  /*===== Footer =====*/
 
+  footer {
+    padding: 5em 0;
+  }
 
+  footer h2, 
+  .footer__contact {
+    margin-left: 10%;
+  }
 
+  footer h2{
+    color: var(--primary-blue);
+  }
 
+  .footer__contact {
+    padding: 3% 0 7.5%;
+  }
 
+  .footer__contact-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
 
+  .footer__contact-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+    font-size: var(--p-text-font-size);
+    color: var(--primary-blue);
+  }
 
+  hr {
+    width: 85%;
+    margin: 0 auto 2em;
+    color: var(--secondary-slate-gray);
+  }
 
+  small {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--primary-blue);
+  }
 
+  /*===== Pricing =====*/
 
+  .pricing__main-windows {
+    padding: 2em 0;
+  }
+
+  .pricing__main-windows h2, 
+  .pricing__main-other h2 {
+    text-align: center;
+    color: var(--primary-blue);
+  }
+
+  .pricing__main-windows-card-container {
+      width: 90%;
+      margin: 0 auto;
+      padding: 5% 0%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2.5em;
+  }
+
+  .pricing__main-card {
+    border: var(--secondary-slate-gray) 1px solid;
+    border-radius: 0.5rem;
+    padding: 5%;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1.5em;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .pricing__main-card svg {
+      width: 30px;
+      height: auto;
+  }
+
+  .pricing__main-card-text-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .pricing__main-card-text-cont h3 {
+    color: var(--primary-blue);
+  }
+
+  .pricing__main-card-text-cont p {
+    color: var(--secondary-slate-gray);
+  }
+
+  .pricing__main-card-text-cont a {
+    background-color: var(--primary-blue);
+    color: var(--secondary-soft-white);
+    padding: 1rem 4rem;
+    border-radius: 0.5rem;
+    font-size: var(--p-text-font-size);
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .pricing__main-card-text-cont a:hover {
+    background-color: var(--light-blue-btn-hover);
+    font-weight: 600;
+  }
+
+  .pricing__main-other h2 {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .pricing__main-other-card-container {
+      width: 90%;
+      margin: 0 auto;
+      padding: 5% 0%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2.5em;
+  }
+
+  /*===== Contact Form =====*/
+
+  .contact__form-title {
+    padding: 1em 0;
+    color: var(--primary-blue);
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  form {
+    width: 90%;
+    margin: 0 auto;
+  }
+    
+  /* Form container */
+  .form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  /* Fieldsets */
+  .form__fieldset {
+    border: none;
+    margin-bottom: 2rem;
+    padding: 0;
+  }
+
+  .form__legend {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--primary-blue);
+    margin-bottom: 1.5rem;
+  }
+
+  /* Field wrapper */
+  .form__field {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+
+  /* Inputs, textareas */
+  .form__input,
+  .form__textarea,
+  .form__select {
+    width: 100%;
+    padding: 1.2rem 0.75rem 0.4rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    outline: none;
+    appearance: none;
+  }
+
+  /* Floating labels */
+  .form__label {
+    position: absolute;
+    top: 1rem;
+    left: 0.75rem;
+    font-size: 1rem;
+    color: #666;
+    background-color: white;
+    padding: 0 0.25rem;
+    transition: all 0.2s ease;
+    pointer-events: none;
+  }
+
+  /* Float when focused or filled */
+  .form__input:focus + .form__label,
+  .form__input:not(:placeholder-shown) + .form__label,
+  .form__textarea:focus + .form__label,
+  .form__textarea:not(:placeholder-shown) + .form__label,
+  .form__select:focus + .form__label,
+  .form__select:not([value=""]) + .form__label {
+    top: -0.6rem;
+    font-size: 0.75rem;
+    color: var(--primary-blue);
+  }
+
+  /* Textarea specific */
+  .form__textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  /* Button */
+  .form__submit {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-blue);
+    color: var(--secondary-soft-white);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  .form__submit:hover {
+    background-color: var(--light-blue-btn-hover);
+    font-weight: 600;
+  }
+
+  /* Fix for autofill and placeholder floating */
+  .form__input:placeholder-shown,
+  .form__textarea:placeholder-shown {
+    padding-top: 1.2rem;
+  }
+
+  /* Visually hide native placeholder for selects */
+  .form__select option[disabled] {
+    display: none;
+  }
+
+  .main__contact-page-phone-block {
+    background-color: var(--secondary-slate-gray);
+    color: var(--secondary-soft-white);
+    margin-top: 2rem;
+    padding: 2rem;
+  }
+
+  .main__contact-page-phone-container {
+    margin: 0 auto;
+    width: fit-content;
+    text-align: center;
+  }
+
+  .main__contact-page-phone-container a {
+    font-size: var(--h3-text-font-size);
+  }
+
+   /*===== Thank You =====*/
+
+  .main__thankyou-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+  }
+
+   .main__thankyou-page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    max-width: 80%;
+   }
+
+   .main__thankyou-page-title {
+    color: var(--primary-blue);
+    text-align: center;
+   }
+
+   .main__thankyou-page-homepage-link {
+    color: var(--primary-blue);
+    font-size: var(--p-text-font-size);
+    text-align: center;
+   }
+
+    /*===================*/
+    /*===== 1281px+ =====*/
+    /*===================*/
+
+    @media screen and (min-width:1281px) {
+
+      .our__services-card-container {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+
+      
+    }
