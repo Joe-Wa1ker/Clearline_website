@@ -45,6 +45,7 @@
     --h1-text-font-size: 3.5rem;
     --h2-text-font-size: 2.5rem;
     --h3-text-font-size: 2.2rem;
+    --h4-text-font-size: 2rem;
     --p-text-font-size: 1.5rem;
     --header__top-nav-font-size: 1.3rem;
     --cta-btn-font-size: 1.1rem;
@@ -92,6 +93,10 @@
 
   h3 {
     font-size: var(--h3-text-font-size);
+  }
+
+  h4 {
+    font-size: var(--h4-text-font-size);
   }
 
   p {
@@ -202,6 +207,38 @@
   .why__us-card-text {
     align-self: center;
   }
+
+  .why__us-body-container {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .why__us-body-container h3, 
+  .why__us-body-container h4 {
+    color: var(--primary-blue);
+  }
+
+  why__us-body-container h4 {
+    margin-top: 3rem;
+  }
+
+  .why__us-body-container ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .why__us-body-container li {
+    font-size: var(--p-text-font-size);
+  }
+
+  .why__us-body-container span {
+    color: var(--primary-blue);
+    font-weight: bold;
+  }
+  
 
   /*===== Our Services =====*/
 
